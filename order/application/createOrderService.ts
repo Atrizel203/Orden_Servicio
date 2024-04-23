@@ -6,7 +6,7 @@ export class CreateOrderService {
     constructor(private readonly sendMessageService: SendMessageService) {}
     async execute(order : Order) : Promise<Order> {
         try {
-            // await this.sendMessageService.execute(order, QueueName.BASE);    
+             await this.sendMessageService.execute(order, QueueName.BASE);    
             console.log(order);
             return order;
         } catch (error : any) {
